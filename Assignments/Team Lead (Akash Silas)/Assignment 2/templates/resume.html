@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+    <style>
+        
+
+        table, th, td {
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            font-size: large;
+        }
+
+        .summary{
+            background-color: lightgrey;
+            width: 400px;
+            border: 2px solid black;
+            padding: 10px 30px;
+            margin: 10px;
+            padding-bottom: 25px;
+            margin-left: 20%;
+            height: fit-content;
+        }
+
+        .topnav {
+            overflow: hidden;
+            background-color: #FFE4C4;
+            float: right;
+            height: 40px;
+            
+            
+        }       
+        .topnav a:hover {
+            background-color: #ddd;
+            color: black;
+            
+        }
+        .topnav a {
+            text-decoration: none;
+            color : black;
+            font-size: larger;
+            padding: 10px 20px;
+        }
+        .name{
+            background-color: #FFE4C4;
+            height: 40px;          
+        }
+        .name h1{
+            margin-left: 10px;
+        }
+        .main-content{
+            display: flex;
+        }
+
+        .skill{
+            display: flex;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="topnav">
+        <label><a href="{{ url_for('home') }}">HOME</a></label>
+        <label><a href="{{ url_for('upload') }}">UPLOAD</a></label>
+        
+        
+    </nav>
+    <div class="name">
+        <h1>V.VENKATAKRISHNAN</h1> 
+    </div>
+
+    <div class="main-content">
+        <div>
+            <h3>MOBILE</h3>
+            <p>7358272556</p>
+            <h3>EMAIL</h3>
+            <p>dummy@gmail.com</p>
+            <h3>NATIONALITY</h3>
+            <p>Indian</p>
+            <h3>GITHUB</h3>
+            <p>https://github.com/vvenkat1241</p>
+        </div>
+        <div class="summary">
+            <h2>PROFESSIONAL SUMMARY</h2>
+            Passionate computer science student
+		looking to build an innovation-backed
+		career in a spirited, collaborative workspace.
+		Eager to drive real-time outcomes through
+		consistent learning and experimenting. 
+        </div>
+        
+    </div>
+
+    <div class="qualifications">
+        {%block value %} {%endblock%}
+    </div>
+
+    <div class="skill">
+        
+        <div class="skills">
+            {%block content%} {%endblock%}
+        </div> 
+
+    </div>
+    
+    
+
+    
+
+</body>
+</html>

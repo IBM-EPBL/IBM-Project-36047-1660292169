@@ -1,0 +1,38 @@
+{% extends 'resume.html' %}
+
+
+    <h1>{% block title %} RESUME {% endblock %}</h1>
+    
+
+    {% block value %}
+        <h2>EDUCATIONAL QUALIFICATIONS</h2>
+        <table>
+            <tr>
+                <th> Senior Secondary Education</th>
+                <td>2018-2019</td>
+                <td>P.S.B.B.S.S School</td>
+                <td>Specification : BioMaths</td>
+                <td>Percentage : 95 %</td>
+            </tr>
+            <tr>
+                <th>Under Graduate Program</th>
+                <td>2018-2019</td>
+                <td>Easwari Engineering College</td>
+                <td>Specification : B.E. Computer Science and Engineering</td>
+                <td>CGPA : 9.2</td>
+            </tr>
+        </table>
+    {%endblock%}
+
+    {%block content%}
+
+        <h2>TECHNICAL SKILLS</h2>
+        <ul style="list-style-type:disc;">
+            <li>PYTHON</li>
+            <li>JAVA</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JAVASCRIPT</li>
+            <li>MYSQL</li>
+        </ul> 
+    {%endblock%}
